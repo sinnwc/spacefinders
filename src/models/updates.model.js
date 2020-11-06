@@ -6,9 +6,9 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const updates = sequelizeClient.define('updates', {
-    description: {
-      text: DataTypes.STRING,
-      allowNull: false
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     url: {
       type: DataTypes.STRING,
