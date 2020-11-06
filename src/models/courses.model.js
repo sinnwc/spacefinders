@@ -6,10 +6,18 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const courses = sequelizeClient.define('courses', {
-    text: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    building: {
+      type: DataTypes.FLOAT,
+      allowNull: true
+    },
+    slot: {
+      type: DataTypes.FLOAT,
+      allowNull: true
+    },
   }, {
     hooks: {
       beforeCount(options) {
