@@ -31,6 +31,8 @@ module.exports = function (app) {
   buildings.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    buildings.hasMany(models.courses);
+    buildings.belongsToMany(models.lots, {through:'buildings_lots'});
   };
 
   return buildings;

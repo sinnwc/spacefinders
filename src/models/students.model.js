@@ -45,6 +45,7 @@ module.exports = function (app) {
   students.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    students.hasMany(models.courses);
   };
 
   return students;

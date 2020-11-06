@@ -10,14 +10,6 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    building: {
-      type: DataTypes.FLOAT,
-      allowNull: true
-    },
-    slot: {
-      type: DataTypes.FLOAT,
-      allowNull: true
-    },
   }, {
     hooks: {
       beforeCount(options) {
@@ -30,6 +22,9 @@ module.exports = function (app) {
   courses.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    courses.belongsTo(models.students);
+    courses.belongsTo(models.slots);
+    courses.belongsTo(models.buildings);
   };
 
   return courses;
