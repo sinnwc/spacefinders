@@ -11,12 +11,12 @@ module.exports = function (app) {
       allowNull: false
     },
     first_name: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       defaultValue: 0
     },
     password: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       defaultValue: 0
     },
