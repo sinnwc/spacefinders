@@ -26,6 +26,7 @@ module.exports = function (app) {
   slots.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    slots.hasMany(models.courses);
   };
 
   return slots;

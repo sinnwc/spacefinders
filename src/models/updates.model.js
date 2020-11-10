@@ -20,7 +20,7 @@ module.exports = function (app) {
       defaultValue: 0
     },
     date: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DATE,
       allowNull: false
     },
   }, {
